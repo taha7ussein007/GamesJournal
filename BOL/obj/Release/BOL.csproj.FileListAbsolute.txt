@@ -1,0 +1,10 @@
+D:\GamesJournal_Final\BOL\bin\Release\BOL.dll.config
+D:\GamesJournal_Final\BOL\bin\Release\BOL.dll
+D:\GamesJournal_Final\BOL\bin\Release\BOL.pdb
+D:\GamesJournal_Final\BOL\bin\Release\EntityFramework.dll
+D:\GamesJournal_Final\BOL\bin\Release\EntityFramework.SqlServer.dll
+D:\GamesJournal_Final\BOL\bin\Release\EntityFramework.xml
+D:\GamesJournal_Final\BOL\bin\Release\EntityFramework.SqlServer.xml
+D:\GamesJournal_Final\BOL\obj\Release\BOL.csprojResolveAssemblyReference.cache
+D:\GamesJournal_Final\BOL\obj\Release\BOL.dll
+D:\GamesJournal_Final\BOL\obj\Release\BOL.pdb

@@ -1,0 +1,60 @@
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\DAL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\DAL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\obj\Debug\DAL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\DAL\obj\Debug\DAL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\DAL.dll.config
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\DAL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\DAL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\BOL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\BOL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\obj\Debug\DAL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\DAL\obj\Debug\DAL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\DAL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\DAL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\obj\Debug\DAL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\DAL\obj\Debug\DAL.pdb
+D:\GamesJournal_Final\DAL\bin\Debug\DAL.dll.config
+D:\GamesJournal_Final\DAL\bin\Debug\DAL.dll
+D:\GamesJournal_Final\DAL\bin\Debug\DAL.pdb
+D:\GamesJournal_Final\DAL\bin\Debug\BOL.dll
+D:\GamesJournal_Final\DAL\bin\Debug\EntityFramework.dll
+D:\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\GamesJournal_Final\DAL\bin\Debug\BOL.pdb
+D:\GamesJournal_Final\DAL\bin\Debug\EntityFramework.xml
+D:\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\GamesJournal_Final\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\GamesJournal_Final\DAL\obj\Debug\DAL.dll
+D:\GamesJournal_Final\DAL\obj\Debug\DAL.pdb
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\DAL.dll.config
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\DAL.dll
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\DAL.pdb
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\BOL.dll
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\EntityFramework.dll
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\BOL.pdb
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\EntityFramework.xml
+D:\Practise projects\GamesJournal_Final\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Practise projects\GamesJournal_Final\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Practise projects\GamesJournal_Final\DAL\obj\Debug\DAL.dll
+D:\Practise projects\GamesJournal_Final\DAL\obj\Debug\DAL.pdb

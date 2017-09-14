@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.article_stateBs">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>article_stateBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.article_typeBs">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>article_typeBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.articleBs">
+    <Position X="15" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>wAQAAEAAAAAAAAAAAAABAAAAAIEAAAAAAAAAgFAAAAA=</HashCode>
+      <FileName>articleBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.BaseBs">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAEAAQAAAAgAAEAAAAAAAIAAAgBAAAAAA=</HashCode>
+      <FileName>BaseBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.ChiefEditorBs">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChiefEditorBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.CommonAreaBs" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonAreaBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.EditorBs" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EditorBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.faqBs">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>faqBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.feedbackBs">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>feedbackBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.SecurityBs">
+    <Position X="7.25" Y="4" Width="2" />
+    <NestedTypes>
+      <Class Name="BLL.SecurityBs.GamesJournalMembershipProvider" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SecurityBs.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="BLL.SecurityBs.GamesJournalRoleProvider" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SecurityBs.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SecurityBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.user_favBs">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>user_favBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.user_typeBs">
+    <Position X="11.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>user_typeBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.userAreaBs" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userAreaBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.userBs">
+    <Position X="13.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>userBs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

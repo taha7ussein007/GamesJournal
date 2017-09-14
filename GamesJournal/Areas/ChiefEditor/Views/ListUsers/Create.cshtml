@@ -1,0 +1,176 @@
+﻿@model BOL.user
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<br /><br />
+<h2>Create User</h2>
+@if (TempData["Msg"] != null)
+{
+    <div class="alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        @TempData["Msg"].ToString()
+    </div>
+}
+@using (Html.BeginForm("Create", "ListUsers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="name">Full Name: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="username">Username: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="email">Email: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="mobile">Mobile: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.mobile, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.mobile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.user_type.type, "type", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="form-control" id="type" name="type">
+                    @foreach (var item in new BLL.userBs().GetALL())
+                    {
+                        <option value="@item.id" selected>@item.user_type.type</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.user_type.type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="password">Password: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="confirmPassword">Confirm Password: </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.confirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.confirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="">Choose Avatar: </label>
+            <div class="col-md-10">
+
+                <a class='btn btn-success'>
+                    Choose Image...
+                    <input type="file" class="myAvatarSelector" id="AvatarBrowse" name="ProfileImage" size="40">
+                </a> &nbsp;
+                <span class='label label-info' id="uploadFileInfo"></span>
+            </div>
+        </div>
+
+
+      
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<!-- Check Image File Before Submission -->>
+<script>
+    window.URL = window.URL || window.webkitURL;
+    var elBrowse = document.getElementById("AvatarBrowse"),
+        useBlob = false && window.URL; // `true` to use Blob instead of Data-URL
+
+    function readImage(file) {
+        var reader = new FileReader();
+        reader.addEventListener("load", function () {
+            var image = new Image();
+            image.addEventListener("load", function () {
+                var imageInfo = file.name + ' ' +
+                                image.width + '×' +
+                                image.height + ' ' +
+                                file.type + ' ' +
+                                Math.round(file.size / 1024) + 'KB';
+
+                setFileInfo(imageInfo);
+            });
+            image.src = useBlob ? window.URL.createObjectURL(file) : reader.result;
+            if (useBlob) {
+                window.URL.revokeObjectURL(file); // Free memory
+            }
+        });
+        reader.readAsDataURL(file);
+    }
+
+    elBrowse.addEventListener("change", function () {
+        var files = this.files;
+        var errors = "";
+        if (!files) {
+            errors += "File upload not supported by your browser.";
+        }
+        if (files[0]) {
+            var file = files[0];
+            if ((/\.(png|jpeg|jpg|gif)$/i).test(file.name)) {
+                readImage(file);
+            } else {
+                errors += file.name + " Unsupported Image extension\n";
+                setFileInfo("invalid");
+                resetBrowseVal();
+            }
+        }
+        if (errors) {
+            alert(errors);
+        }
+    });
+
+    function setFileInfo(fileInfo) {
+        if (fileInfo !== "invalid") {
+            $("#uploadFileInfo").text(fileInfo).show();
+            return;
+        }
+        $("#uploadFileInfo").text("File Not valid!").show().fadeOut(1500);
+    }
+
+    function resetBrowseVal()
+    {
+        $("#AvatarBrowse").val("");
+    }
+</script>

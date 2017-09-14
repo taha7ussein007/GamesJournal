@@ -1,0 +1,12 @@
+D:\GamesJournal_Final\BLL\bin\Release\BLL.dll.config
+D:\GamesJournal_Final\BLL\bin\Release\BLL.dll
+D:\GamesJournal_Final\BLL\bin\Release\BLL.pdb
+D:\GamesJournal_Final\BLL\bin\Release\BOL.dll
+D:\GamesJournal_Final\BLL\bin\Release\DAL.dll
+D:\GamesJournal_Final\BLL\bin\Release\EntityFramework.dll
+D:\GamesJournal_Final\BLL\bin\Release\BOL.pdb
+D:\GamesJournal_Final\BLL\bin\Release\DAL.pdb
+D:\GamesJournal_Final\BLL\bin\Release\EntityFramework.xml
+D:\GamesJournal_Final\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\GamesJournal_Final\BLL\obj\Release\BLL.dll
+D:\GamesJournal_Final\BLL\obj\Release\BLL.pdb

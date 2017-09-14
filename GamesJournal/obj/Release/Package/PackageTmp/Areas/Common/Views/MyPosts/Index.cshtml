@@ -1,0 +1,171 @@
+﻿@model IEnumerable<BOL.article>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+ 
+
+<h2>Articles On Games Journal</h2>
+<div class="pull-right">
+    <div class="btn-group ">
+        <button type="button" class="btn btn-primary">Export To</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Excel", "ExportTo", new { ReportType = "Excel" })</li>
+            <li>@Html.ActionLink("PDF", "ExportTo", new { ReportType = "PDF" })</li>
+            <li>@Html.ActionLink("Word", "ExportTo", new { ReportType = "Word" })</li>
+        </ul>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Add Article", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "BrowseArticles", FormMethod.Get))
+{
+<p>
+    Match Title | Content | Author | Category | : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+    <input type="submit" value="Search" />
+    <input placeholder=Search class=animated-search-filter>
+</p>
+  
+@*<p>
+Select Department: @Html.DropDownList("Wanted2SearchBy", "All")
+ Find By @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+<input type="submit" value="Filter" />
+</p>*@
+
+    <legend>Articles By Category</legend>
+    @Html.DropDownList("filterString", "Select a Category")  
+    <input type="submit" value="Filter" />
+}
+
+    
+
+<table class="table table-responsive table-bordered table-striped table-hover">
+
+
+    <tr class="info">
+        <th>
+            @Html.ActionLink("Article_Title", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "title", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Content", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "content", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("# of Views", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "title", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Rating", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "rating", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Link", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "title", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Date & Time", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "Date&Time", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Author", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "author", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Author Role", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "author", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Category", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "category", page = (ViewBag.Page == null ? "1" : ViewBag.Page), currentFilter = ViewBag.CurrentFilter })
+        </th>
+
+        @if (User.IsInRole(BOL.userTypesEn.ChiefEditorStr) || User.IsInRole(BOL.userTypesEn.EditorStr))
+        { 
+          <th>Update</th>
+          <th>Description</th>
+          <th>Remove</th>
+        }
+        @if (User.IsInRole(BOL.userTypesEn.usertr))
+        {
+            <th>Update</th>
+            <th>Description</th>
+            <th>Remove</th>
+        }
+    </tr>
+
+   
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.views)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.name)
+            </td>
+            <td>
+               @item.user.user_type.type
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.article_type.category)
+            </td>
+
+
+            @if (User.IsInRole(BOL.userTypesEn.ChiefEditorStr) || User.IsInRole(BOL.userTypesEn.EditorStr))
+            {
+               <td>@Html.ActionLink("Edit", "Edit", new { id = item.id })</td>
+               <td>@Html.ActionLink("Details", "Details", new { id = item.id }) </td> 
+               <td>@Html.ActionLink("Delete", "Delete", new { id = item.id })</td> 
+            }
+           
+             @if (User.IsInRole(BOL.userTypesEn.usertr) && item.category == 3 )
+            {
+                <td>@Html.ActionLink("Edit", "Edit", new { id = item.id })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.id }) </td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = item.id })</td>
+            }
+            
+        </tr>
+    }
+
+</table>
+
+
+@{
+    double TotalPage = @ViewBag.TotalPages;
+}
+<ul class="pagination">
+    @for (int i = 1; i <= TotalPage; i++)
+    {
+
+        if (i == ViewBag.Page)
+        {
+            <li class="active"> @Html.ActionLink(i.ToString() + " ", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder), SortBy = (ViewBag.SortBy == null ? "title" : ViewBag.SortBy), Page = i })</li>
+        }
+        else
+        {
+            <li>
+                @Html.ActionLink(i.ToString() + " ", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder), SortBy = (ViewBag.SortBy == null ? "title" : ViewBag.SortBy), Page = i })
+            </li>
+        }
+
+    }
+</ul>
+
+
+@*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+
+@*@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))*@

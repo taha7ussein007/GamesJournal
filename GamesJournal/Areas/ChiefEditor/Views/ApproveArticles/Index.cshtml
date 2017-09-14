@@ -1,0 +1,140 @@
+﻿@model IEnumerable<BOL.article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/SSSDCore/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+
+        BindSelectAll();
+
+        $(document).ajaxStart(function () {
+            $("#loading").show();
+        });
+
+        $(document).ajaxStop(function () {
+            $("#loading").hide();
+        });
+
+        $("#Approve").click(function () {
+            checkedIds = $(".ckb").filter(":checked").map(function () { return this.id; });
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ApproveOrRejectAll","ApproveArticles")",
+                traditional: true,
+                data: { Ids: checkedIds.toArray(), Status: "@BOL.articleStateEn.ApprovedStr", CurrentStatus: "@ViewBag.Status" },
+                success: successFunc,
+                error: errorFunc
+            });
+
+            function successFunc(data, status) {
+                $("#Data").html(data);
+                BindSelectAll();
+            }
+
+            function errorFunc() {
+                alert('error');
+            }
+
+            });
+
+            $("#Reject").click(function () {
+                checkedIds = $(".ckb").filter(":checked").map(function () { return this.id; });
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("ApproveOrRejectAll", "ApproveArticles")",
+                    traditional: true,
+                    data:{ Ids:checkedIds.toArray(),Status: "@BOL.articleStateEn.RefusedStr", CurrentStatus:"@ViewBag.Status"},
+                success: successFunc,
+                error: errorFunc
+            });
+
+            function successFunc(data, status) {
+                    $("#Data").html(data);
+                    BindSelectAll();
+            }
+
+            function errorFunc() {
+                alert('error');
+            }
+
+        });
+    });
+
+
+    function BindSelectAll()
+    {
+        $("#selectall").click(function (event) {  //on click
+            if (this.checked) { // check select status
+                $('.ckb').each(function () { //loop through each checkbox
+                    this.checked = true;  //select all checkboxes with class "checkbox1"
+                });
+            } else {
+                $('.ckb').each(function () { //loop through each checkbox
+                    this.checked = false; //deselect all checkboxes with class "checkbox1"
+                });
+            }
+        });
+    }
+
+    function ConfirmApprove() {
+        return confirm('Are you sure you want to Approve?');
+    }
+    function ConfirmReject() {
+        return confirm('Are you sure you want to Reject?');
+    }
+</script>
+
+
+<br /><br /><br /><br />
+<h2>Manage Articles</h2>
+
+<div id="loading" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Loading...</h4>
+            </div>
+            <div class="modal-body">
+                <div class="progress progress-striped active">
+                    <div class="progress-bar" style="width:100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="nav nav-pills">
+    @if (ViewBag.Status == BOL.articleStateEn.PendingStr)
+    {
+        <li class="active">@Html.ActionLink("Pending Articles", "Index", new { Status = BOL.articleStateEn.PendingStr })</li>
+    }
+    else
+    {
+        <li> @Html.ActionLink("Pending Articles", "Index", new { Status = BOL.articleStateEn.PendingStr })</li>
+    }
+    @if (ViewBag.Status == BOL.articleStateEn.ApprovedStr)
+    {
+        <li class="active">@Html.ActionLink("Approved Articles", "Index", new { Status = BOL.articleStateEn.ApprovedStr }) </li>
+    }
+    else
+    {
+        <li>@Html.ActionLink("Approved Articles", "Index", new { Status = BOL.articleStateEn.ApprovedStr })</li>
+    }
+    @if (ViewBag.Status == BOL.articleStateEn.RefusedStr)
+    {
+        <li class="active">@Html.ActionLink("Rejected Articles", "Index", new { Status = BOL.articleStateEn.RefusedStr }) </li>
+    }
+    else
+    {
+        <li>@Html.ActionLink("Rejected Articles", "Index", new { Status = BOL.articleStateEn.RefusedStr })</li>
+    }
+</ul>
+<div id="Data">
+    @Html.Partial("pv_ApproveArticles", Model)
+</div>
+
+<input type="button" id="Approve" value="Approve" class="btn btn-success" /> | <input type="button" id="Reject" value="Reject" class="btn btn-danger" />
+

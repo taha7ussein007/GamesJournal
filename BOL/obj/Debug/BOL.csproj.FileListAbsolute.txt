@@ -1,0 +1,47 @@
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\BOL.dll.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\EntityFramework.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\EntityFramework.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\obj\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\BOL\obj\Debug\BOL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\BOL.dll.config
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\BOL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\BOL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\EntityFramework.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\EntityFramework.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\obj\Debug\BOL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\BOL\obj\Debug\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\BOL.dll.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\EntityFramework.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\EntityFramework.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\obj\Debug\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\BOL\obj\Debug\BOL.pdb
+D:\GamesJournal_Final\BOL\bin\Debug\BOL.dll.config
+D:\GamesJournal_Final\BOL\bin\Debug\BOL.dll
+D:\GamesJournal_Final\BOL\bin\Debug\BOL.pdb
+D:\GamesJournal_Final\BOL\bin\Debug\EntityFramework.dll
+D:\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.dll
+D:\GamesJournal_Final\BOL\bin\Debug\EntityFramework.xml
+D:\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.xml
+D:\GamesJournal_Final\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache
+D:\GamesJournal_Final\BOL\obj\Debug\BOL.dll
+D:\GamesJournal_Final\BOL\obj\Debug\BOL.pdb
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\BOL.dll.config
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\BOL.dll
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\BOL.pdb
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\EntityFramework.dll
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\EntityFramework.xml
+D:\Practise projects\GamesJournal_Final\BOL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Practise projects\GamesJournal_Final\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache
+D:\Practise projects\GamesJournal_Final\BOL\obj\Debug\BOL.dll
+D:\Practise projects\GamesJournal_Final\BOL\obj\Debug\BOL.pdb

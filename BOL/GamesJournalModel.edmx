@@ -1,0 +1,1239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GamesJournalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="article">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="ntext" Nullable="false" />
+          <Property Name="content" Type="ntext" Nullable="false" />
+          <Property Name="category" Type="int" Nullable="false" />
+          <Property Name="author" Type="int" Nullable="false" />
+          <Property Name="state" Type="int" Nullable="false" />
+          <Property Name="views" Type="int" Nullable="false" />
+          <Property Name="rating" Type="int" />
+          <Property Name="rate_count" Type="int" Nullable="false" />
+          <Property Name="link" Type="varchar" MaxLength="1000" />
+          <Property Name="timestamp" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_state">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="state" Type="varchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="article_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="category" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="article_id" Type="int" Nullable="false" />
+          <Property Name="content" Type="ntext" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="timestamp" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="compatible_game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="game_id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="complaint">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="responder_id" Type="int" />
+          <Property Name="content" Type="ntext" Nullable="false" />
+          <Property Name="response" Type="ntext" />
+          <Property Name="comp_timestamp" Type="datetime" Nullable="false" />
+          <Property Name="resp_timestamp" Type="datetime" />
+        </EntityType>
+        <EntityType Name="faq">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="question" Type="ntext" Nullable="false" />
+          <Property Name="answer" Type="ntext" />
+          <Property Name="asker_id" Type="int" Nullable="false" />
+          <Property Name="respondent_id" Type="int" />
+          <Property Name="q_timestamp" Type="datetime" Nullable="false" />
+          <Property Name="a_timestamp" Type="datetime" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="content" Type="ntext" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="release_date" Type="datetime" Nullable="false" />
+          <Property Name="description" Type="ntext" Nullable="false" />
+          <Property Name="links" Type="ntext" Nullable="false" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="publisher" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="latest_news">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="brief" Type="ntext" Nullable="false" />
+          <Property Name="link" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="publisher" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pc_specs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="pc_no" Type="int" Nullable="false" />
+          <Property Name="cpu_model" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="memory_size" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="gpu_model" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="resolution" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="profile_picture" Type="image" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="mobile" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="active" Type="smallint" Nullable="false" />
+          <Property Name="profile_link" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="user_fav">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="art_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="article_article_ibfk_1">
+          <End Role="article_state" Type="Self.article_state" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article_state">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="state" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="article_article_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="article_article_ibfk_3">
+          <End Role="article_type" Type="Self.article_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comment_comment_ibfk_1">
+          <End Role="article" Type="Self.article" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="comment" Type="Self.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="article_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comment_comment_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comment" Type="Self.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="compatible_game_compatible_game_ibfk_1">
+          <End Role="game_type" Type="Self.game_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="compatible_game" Type="Self.compatible_game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="compatible_game">
+              <PropertyRef Name="game_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="compatible_game_compatible_game_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="compatible_game" Type="Self.compatible_game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="compatible_game">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="complaint_complaint_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="complaint" Type="Self.complaint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="complaint">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="complaint_complaint_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="complaint" Type="Self.complaint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="complaint">
+              <PropertyRef Name="responder_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="faq_faq_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="faq" Type="Self.faq" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="faq">
+              <PropertyRef Name="asker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="faq_faq_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="faq" Type="Self.faq" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="faq">
+              <PropertyRef Name="respondent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="feedback_feedback_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="feedback" Type="Self.feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="feedback">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="game_game_ibfk_1">
+          <End Role="game_type" Type="Self.game_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="game" Type="Self.game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="game">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="game_game_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="game" Type="Self.game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="game">
+              <PropertyRef Name="publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="latest_news_latest_news_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="latest_news" Type="Self.latest_news" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="latest_news">
+              <PropertyRef Name="publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="pc_specs_pc_specs_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="pc_specs" Type="Self.pc_specs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pc_specs">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_fav_user_fav_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="user_fav" Type="Self.user_fav" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user_fav">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_fav_user_fav_ibfk_2">
+          <End Role="article" Type="Self.article" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="user_fav" Type="Self.user_fav" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user_fav">
+              <PropertyRef Name="art_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_user_ibfk_1">
+          <End Role="user_type" Type="Self.user_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GamesJournalModelStoreContainer">
+          <EntitySet Name="article" EntityType="Self.article" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="article_state" EntityType="Self.article_state" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="article_type" EntityType="Self.article_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comment" EntityType="Self.comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="compatible_game" EntityType="Self.compatible_game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="complaint" EntityType="Self.complaint" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="faq" EntityType="Self.faq" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="game" EntityType="Self.game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="game_type" EntityType="Self.game_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="latest_news" EntityType="Self.latest_news" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pc_specs" EntityType="Self.pc_specs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_fav" EntityType="Self.user_fav" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_type" EntityType="Self.user_type" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="article_article_ibfk_1" Association="Self.article_article_ibfk_1">
+            <End Role="article_state" EntitySet="article_state" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="article_article_ibfk_2" Association="Self.article_article_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="article_article_ibfk_3" Association="Self.article_article_ibfk_3">
+            <End Role="article_type" EntitySet="article_type" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="comment_comment_ibfk_1" Association="Self.comment_comment_ibfk_1">
+            <End Role="article" EntitySet="article" />
+            <End Role="comment" EntitySet="comment" />
+          </AssociationSet>
+          <AssociationSet Name="comment_comment_ibfk_2" Association="Self.comment_comment_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="comment" EntitySet="comment" />
+          </AssociationSet>
+          <AssociationSet Name="compatible_game_compatible_game_ibfk_1" Association="Self.compatible_game_compatible_game_ibfk_1">
+            <End Role="game_type" EntitySet="game_type" />
+            <End Role="compatible_game" EntitySet="compatible_game" />
+          </AssociationSet>
+          <AssociationSet Name="compatible_game_compatible_game_ibfk_2" Association="Self.compatible_game_compatible_game_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="compatible_game" EntitySet="compatible_game" />
+          </AssociationSet>
+          <AssociationSet Name="complaint_complaint_ibfk_1" Association="Self.complaint_complaint_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="complaint" EntitySet="complaint" />
+          </AssociationSet>
+          <AssociationSet Name="complaint_complaint_ibfk_2" Association="Self.complaint_complaint_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="complaint" EntitySet="complaint" />
+          </AssociationSet>
+          <AssociationSet Name="faq_faq_ibfk_1" Association="Self.faq_faq_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="faq" EntitySet="faq" />
+          </AssociationSet>
+          <AssociationSet Name="faq_faq_ibfk_2" Association="Self.faq_faq_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="faq" EntitySet="faq" />
+          </AssociationSet>
+          <AssociationSet Name="feedback_feedback_ibfk_1" Association="Self.feedback_feedback_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="feedback" EntitySet="feedback" />
+          </AssociationSet>
+          <AssociationSet Name="game_game_ibfk_1" Association="Self.game_game_ibfk_1">
+            <End Role="game_type" EntitySet="game_type" />
+            <End Role="game" EntitySet="game" />
+          </AssociationSet>
+          <AssociationSet Name="game_game_ibfk_2" Association="Self.game_game_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="game" EntitySet="game" />
+          </AssociationSet>
+          <AssociationSet Name="latest_news_latest_news_ibfk_1" Association="Self.latest_news_latest_news_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="latest_news" EntitySet="latest_news" />
+          </AssociationSet>
+          <AssociationSet Name="pc_specs_pc_specs_ibfk_1" Association="Self.pc_specs_pc_specs_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="pc_specs" EntitySet="pc_specs" />
+          </AssociationSet>
+          <AssociationSet Name="user_fav_user_fav_ibfk_1" Association="Self.user_fav_user_fav_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="user_fav" EntitySet="user_fav" />
+          </AssociationSet>
+          <AssociationSet Name="user_fav_user_fav_ibfk_2" Association="Self.user_fav_user_fav_ibfk_2">
+            <End Role="article" EntitySet="article" />
+            <End Role="user_fav" EntitySet="user_fav" />
+          </AssociationSet>
+          <AssociationSet Name="user_user_ibfk_1" Association="Self.user_user_ibfk_1">
+            <End Role="user_type" EntitySet="user_type" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GamesJournalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="article">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="category" Type="Int32" Nullable="false" />
+          <Property Name="author" Type="Int32" Nullable="false" />
+          <Property Name="state" Type="Int32" Nullable="false" />
+          <Property Name="views" Type="Int32" Nullable="false" />
+          <Property Name="rating" Type="Int32" />
+          <Property Name="rate_count" Type="Int32" Nullable="false" />
+          <Property Name="link" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="article_state" Relationship="Self.article_article_ibfk_1" FromRole="article" ToRole="article_state" />
+          <NavigationProperty Name="user" Relationship="Self.article_article_ibfk_2" FromRole="article" ToRole="user" />
+          <NavigationProperty Name="article_type" Relationship="Self.article_article_ibfk_3" FromRole="article" ToRole="article_type" />
+          <NavigationProperty Name="comment" Relationship="Self.comment_comment_ibfk_1" FromRole="article" ToRole="comment" />
+          <NavigationProperty Name="user_fav" Relationship="Self.user_fav_user_fav_ibfk_2" FromRole="article" ToRole="user_fav" />
+        </EntityType>
+        <EntityType Name="article_state">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="state" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="article" Relationship="Self.article_article_ibfk_1" FromRole="article_state" ToRole="article" />
+        </EntityType>
+        <EntityType Name="article_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="article" Relationship="Self.article_article_ibfk_3" FromRole="article_type" ToRole="article" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="article_id" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="article" Relationship="Self.comment_comment_ibfk_1" FromRole="comment" ToRole="article" />
+          <NavigationProperty Name="user" Relationship="Self.comment_comment_ibfk_2" FromRole="comment" ToRole="user" />
+        </EntityType>
+        <EntityType Name="compatible_game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="game_id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="game_type" Relationship="Self.compatible_game_compatible_game_ibfk_1" FromRole="compatible_game" ToRole="game_type" />
+          <NavigationProperty Name="user" Relationship="Self.compatible_game_compatible_game_ibfk_2" FromRole="compatible_game" ToRole="user" />
+        </EntityType>
+        <EntityType Name="complaint">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="responder_id" Type="Int32" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="response" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="comp_timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="resp_timestamp" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="user" Relationship="Self.complaint_complaint_ibfk_1" FromRole="complaint" ToRole="user" />
+          <NavigationProperty Name="user1" Relationship="Self.complaint_complaint_ibfk_2" FromRole="complaint" ToRole="user" />
+        </EntityType>
+        <EntityType Name="faq">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="asker_id" Type="Int32" Nullable="false" />
+          <Property Name="respondent_id" Type="Int32" />
+          <Property Name="q_timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="a_timestamp" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="user" Relationship="Self.faq_faq_ibfk_1" FromRole="faq" ToRole="user" />
+          <NavigationProperty Name="user1" Relationship="Self.faq_faq_ibfk_2" FromRole="faq" ToRole="user" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.feedback_feedback_ibfk_1" FromRole="feedback" ToRole="user" />
+        </EntityType>
+        <EntityType Name="game">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="release_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="links" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <Property Name="publisher" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="game_type" Relationship="Self.game_game_ibfk_1" FromRole="game" ToRole="game_type" />
+          <NavigationProperty Name="user" Relationship="Self.game_game_ibfk_2" FromRole="game" ToRole="user" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="compatible_game" Relationship="Self.compatible_game_compatible_game_ibfk_1" FromRole="game_type" ToRole="compatible_game" />
+          <NavigationProperty Name="game" Relationship="Self.game_game_ibfk_1" FromRole="game_type" ToRole="game" />
+        </EntityType>
+        <EntityType Name="latest_news">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="brief" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="link" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="publisher" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.latest_news_latest_news_ibfk_1" FromRole="latest_news" ToRole="user" />
+        </EntityType>
+        <EntityType Name="pc_specs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="pc_no" Type="Int32" Nullable="false" />
+          <Property Name="cpu_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="memory_size" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gpu_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="resolution" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.pc_specs_pc_specs_ibfk_1" FromRole="pc_specs" ToRole="user" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="profile_picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mobile" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <Property Name="active" Type="Int16" Nullable="false" />
+          <Property Name="profile_link" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="article" Relationship="Self.article_article_ibfk_2" FromRole="user" ToRole="article" />
+          <NavigationProperty Name="comment" Relationship="Self.comment_comment_ibfk_2" FromRole="user" ToRole="comment" />
+          <NavigationProperty Name="compatible_game" Relationship="Self.compatible_game_compatible_game_ibfk_2" FromRole="user" ToRole="compatible_game" />
+          <NavigationProperty Name="complaint" Relationship="Self.complaint_complaint_ibfk_1" FromRole="user" ToRole="complaint" />
+          <NavigationProperty Name="complaint1" Relationship="Self.complaint_complaint_ibfk_2" FromRole="user" ToRole="complaint" />
+          <NavigationProperty Name="faq" Relationship="Self.faq_faq_ibfk_1" FromRole="user" ToRole="faq" />
+          <NavigationProperty Name="faq1" Relationship="Self.faq_faq_ibfk_2" FromRole="user" ToRole="faq" />
+          <NavigationProperty Name="feedback" Relationship="Self.feedback_feedback_ibfk_1" FromRole="user" ToRole="feedback" />
+          <NavigationProperty Name="game" Relationship="Self.game_game_ibfk_2" FromRole="user" ToRole="game" />
+          <NavigationProperty Name="latest_news" Relationship="Self.latest_news_latest_news_ibfk_1" FromRole="user" ToRole="latest_news" />
+          <NavigationProperty Name="pc_specs" Relationship="Self.pc_specs_pc_specs_ibfk_1" FromRole="user" ToRole="pc_specs" />
+          <NavigationProperty Name="user_fav" Relationship="Self.user_fav_user_fav_ibfk_1" FromRole="user" ToRole="user_fav" />
+          <NavigationProperty Name="user_type" Relationship="Self.user_user_ibfk_1" FromRole="user" ToRole="user_type" />
+        </EntityType>
+        <EntityType Name="user_fav">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="art_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="article" Relationship="Self.user_fav_user_fav_ibfk_2" FromRole="user_fav" ToRole="article" />
+          <NavigationProperty Name="user" Relationship="Self.user_fav_user_fav_ibfk_1" FromRole="user_fav" ToRole="user" />
+        </EntityType>
+        <EntityType Name="user_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.user_user_ibfk_1" FromRole="user_type" ToRole="user" />
+        </EntityType>
+        <Association Name="article_article_ibfk_1">
+          <End Role="article_state" Type="Self.article_state" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article_state">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="state" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="article_article_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="article_article_ibfk_3">
+          <End Role="article_type" Type="Self.article_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="article" Type="Self.article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="article">
+              <PropertyRef Name="category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comment_comment_ibfk_1">
+          <End Role="article" Type="Self.article" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="comment" Type="Self.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="article_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_fav_user_fav_ibfk_2">
+          <End Role="article" Type="Self.article" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="user_fav" Type="Self.user_fav" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="article">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user_fav">
+              <PropertyRef Name="art_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="comment_comment_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comment" Type="Self.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="comment">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="compatible_game_compatible_game_ibfk_1">
+          <End Role="game_type" Type="Self.game_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="compatible_game" Type="Self.compatible_game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="compatible_game">
+              <PropertyRef Name="game_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="compatible_game_compatible_game_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="compatible_game" Type="Self.compatible_game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="compatible_game">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="complaint_complaint_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="complaint" Type="Self.complaint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="complaint">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="complaint_complaint_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="complaint" Type="Self.complaint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="complaint">
+              <PropertyRef Name="responder_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="faq_faq_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="faq" Type="Self.faq" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="faq">
+              <PropertyRef Name="asker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="faq_faq_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="faq" Type="Self.faq" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="faq">
+              <PropertyRef Name="respondent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="feedback_feedback_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="feedback" Type="Self.feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="feedback">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="game_game_ibfk_1">
+          <End Role="game_type" Type="Self.game_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="game" Type="Self.game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="game_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="game">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="game_game_ibfk_2">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="game" Type="Self.game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="game">
+              <PropertyRef Name="publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="latest_news_latest_news_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="latest_news" Type="Self.latest_news" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="latest_news">
+              <PropertyRef Name="publisher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="pc_specs_pc_specs_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="pc_specs" Type="Self.pc_specs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pc_specs">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_fav_user_fav_ibfk_1">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="user_fav" Type="Self.user_fav" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user_fav">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_user_ibfk_1">
+          <End Role="user_type" Type="Self.user_type" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GamesJournalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="article" EntityType="Self.article" />
+          <EntitySet Name="article_state" EntityType="Self.article_state" />
+          <EntitySet Name="article_type" EntityType="Self.article_type" />
+          <EntitySet Name="comment" EntityType="Self.comment" />
+          <EntitySet Name="compatible_game" EntityType="Self.compatible_game" />
+          <EntitySet Name="complaint" EntityType="Self.complaint" />
+          <EntitySet Name="faq" EntityType="Self.faq" />
+          <EntitySet Name="feedback" EntityType="Self.feedback" />
+          <EntitySet Name="game" EntityType="Self.game" />
+          <EntitySet Name="game_type" EntityType="Self.game_type" />
+          <EntitySet Name="latest_news" EntityType="Self.latest_news" />
+          <EntitySet Name="pc_specs" EntityType="Self.pc_specs" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <EntitySet Name="user_fav" EntityType="Self.user_fav" />
+          <EntitySet Name="user_type" EntityType="Self.user_type" />
+          <AssociationSet Name="article_article_ibfk_1" Association="Self.article_article_ibfk_1">
+            <End Role="article_state" EntitySet="article_state" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="article_article_ibfk_2" Association="Self.article_article_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="article_article_ibfk_3" Association="Self.article_article_ibfk_3">
+            <End Role="article_type" EntitySet="article_type" />
+            <End Role="article" EntitySet="article" />
+          </AssociationSet>
+          <AssociationSet Name="comment_comment_ibfk_1" Association="Self.comment_comment_ibfk_1">
+            <End Role="article" EntitySet="article" />
+            <End Role="comment" EntitySet="comment" />
+          </AssociationSet>
+          <AssociationSet Name="user_fav_user_fav_ibfk_2" Association="Self.user_fav_user_fav_ibfk_2">
+            <End Role="article" EntitySet="article" />
+            <End Role="user_fav" EntitySet="user_fav" />
+          </AssociationSet>
+          <AssociationSet Name="comment_comment_ibfk_2" Association="Self.comment_comment_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="comment" EntitySet="comment" />
+          </AssociationSet>
+          <AssociationSet Name="compatible_game_compatible_game_ibfk_1" Association="Self.compatible_game_compatible_game_ibfk_1">
+            <End Role="game_type" EntitySet="game_type" />
+            <End Role="compatible_game" EntitySet="compatible_game" />
+          </AssociationSet>
+          <AssociationSet Name="compatible_game_compatible_game_ibfk_2" Association="Self.compatible_game_compatible_game_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="compatible_game" EntitySet="compatible_game" />
+          </AssociationSet>
+          <AssociationSet Name="complaint_complaint_ibfk_1" Association="Self.complaint_complaint_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="complaint" EntitySet="complaint" />
+          </AssociationSet>
+          <AssociationSet Name="complaint_complaint_ibfk_2" Association="Self.complaint_complaint_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="complaint" EntitySet="complaint" />
+          </AssociationSet>
+          <AssociationSet Name="faq_faq_ibfk_1" Association="Self.faq_faq_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="faq" EntitySet="faq" />
+          </AssociationSet>
+          <AssociationSet Name="faq_faq_ibfk_2" Association="Self.faq_faq_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="faq" EntitySet="faq" />
+          </AssociationSet>
+          <AssociationSet Name="feedback_feedback_ibfk_1" Association="Self.feedback_feedback_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="feedback" EntitySet="feedback" />
+          </AssociationSet>
+          <AssociationSet Name="game_game_ibfk_1" Association="Self.game_game_ibfk_1">
+            <End Role="game_type" EntitySet="game_type" />
+            <End Role="game" EntitySet="game" />
+          </AssociationSet>
+          <AssociationSet Name="game_game_ibfk_2" Association="Self.game_game_ibfk_2">
+            <End Role="user" EntitySet="user" />
+            <End Role="game" EntitySet="game" />
+          </AssociationSet>
+          <AssociationSet Name="latest_news_latest_news_ibfk_1" Association="Self.latest_news_latest_news_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="latest_news" EntitySet="latest_news" />
+          </AssociationSet>
+          <AssociationSet Name="pc_specs_pc_specs_ibfk_1" Association="Self.pc_specs_pc_specs_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="pc_specs" EntitySet="pc_specs" />
+          </AssociationSet>
+          <AssociationSet Name="user_fav_user_fav_ibfk_1" Association="Self.user_fav_user_fav_ibfk_1">
+            <End Role="user" EntitySet="user" />
+            <End Role="user_fav" EntitySet="user_fav" />
+          </AssociationSet>
+          <AssociationSet Name="user_user_ibfk_1" Association="Self.user_user_ibfk_1">
+            <End Role="user_type" EntitySet="user_type" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GamesJournalModelStoreContainer" CdmEntityContainer="GamesJournalEntities">
+          <EntitySetMapping Name="article">
+            <EntityTypeMapping TypeName="GamesJournalModel.article">
+              <MappingFragment StoreEntitySet="article">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="views" ColumnName="views" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="rate_count" ColumnName="rate_count" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_state">
+            <EntityTypeMapping TypeName="GamesJournalModel.article_state">
+              <MappingFragment StoreEntitySet="article_state">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="state" ColumnName="state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="article_type">
+            <EntityTypeMapping TypeName="GamesJournalModel.article_type">
+              <MappingFragment StoreEntitySet="article_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="category" ColumnName="category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comment">
+            <EntityTypeMapping TypeName="GamesJournalModel.comment">
+              <MappingFragment StoreEntitySet="comment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="compatible_game">
+            <EntityTypeMapping TypeName="GamesJournalModel.compatible_game">
+              <MappingFragment StoreEntitySet="compatible_game">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="game_id" ColumnName="game_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="complaint">
+            <EntityTypeMapping TypeName="GamesJournalModel.complaint">
+              <MappingFragment StoreEntitySet="complaint">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="responder_id" ColumnName="responder_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="response" ColumnName="response" />
+                <ScalarProperty Name="comp_timestamp" ColumnName="comp_timestamp" />
+                <ScalarProperty Name="resp_timestamp" ColumnName="resp_timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="faq">
+            <EntityTypeMapping TypeName="GamesJournalModel.faq">
+              <MappingFragment StoreEntitySet="faq">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+                <ScalarProperty Name="asker_id" ColumnName="asker_id" />
+                <ScalarProperty Name="respondent_id" ColumnName="respondent_id" />
+                <ScalarProperty Name="q_timestamp" ColumnName="q_timestamp" />
+                <ScalarProperty Name="a_timestamp" ColumnName="a_timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="feedback">
+            <EntityTypeMapping TypeName="GamesJournalModel.feedback">
+              <MappingFragment StoreEntitySet="feedback">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="game">
+            <EntityTypeMapping TypeName="GamesJournalModel.game">
+              <MappingFragment StoreEntitySet="game">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="release_date" ColumnName="release_date" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="links" ColumnName="links" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="game_type">
+            <EntityTypeMapping TypeName="GamesJournalModel.game_type">
+              <MappingFragment StoreEntitySet="game_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="latest_news">
+            <EntityTypeMapping TypeName="GamesJournalModel.latest_news">
+              <MappingFragment StoreEntitySet="latest_news">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="brief" ColumnName="brief" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pc_specs">
+            <EntityTypeMapping TypeName="GamesJournalModel.pc_specs">
+              <MappingFragment StoreEntitySet="pc_specs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="pc_no" ColumnName="pc_no" />
+                <ScalarProperty Name="cpu_model" ColumnName="cpu_model" />
+                <ScalarProperty Name="memory_size" ColumnName="memory_size" />
+                <ScalarProperty Name="gpu_model" ColumnName="gpu_model" />
+                <ScalarProperty Name="resolution" ColumnName="resolution" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="GamesJournalModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="profile_link" ColumnName="profile_link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_fav">
+            <EntityTypeMapping TypeName="GamesJournalModel.user_fav">
+              <MappingFragment StoreEntitySet="user_fav">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="art_id" ColumnName="art_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_type">
+            <EntityTypeMapping TypeName="GamesJournalModel.user_type">
+              <MappingFragment StoreEntitySet="user_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

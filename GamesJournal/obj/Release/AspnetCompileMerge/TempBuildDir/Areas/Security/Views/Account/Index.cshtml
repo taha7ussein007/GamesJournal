@@ -1,0 +1,171 @@
+﻿@model BOL.userUpdate
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /><br />
+<h1 class="page-header">Edit Profile</h1>
+@if (TempData["Msg"] != null)
+{
+    <br />
+    <div class="alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        @TempData["Msg"].ToString()
+    </div>
+}
+
+@using (Html.BeginForm("Update", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="text-center">
+                @if (true)
+                {
+                    string uAvatar = "data:image/bitmap;base64," + Convert.ToBase64String(Model.updateProfilePicture);
+                    <a href="javascript:onUAvatarClick();">
+                        <img src="@uAvatar" class="avatar img-circle img-thumbnail" id="AvatarBox" style="width:200px" alt="avatar">
+                    </a>
+                }
+                <h6>Click to upload a new avatar...</h6>
+                <input type="file" id="AvatarBrowse" name="updateProfileImage" class="text-center center-block well well-sm">
+                <h3>Role: <strong>@BOL.userTypesEn.GetEquivelant(Model.Role)</strong></h3>
+            </div>
+        </div>
+        <!-- edit form column -->
+        <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+            <div class="alert alert-warning alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <i class="fa fa-coffee"></i>
+                &nbsp;You Must Enter Your <strong>Current Password</strong> In Order To Update Your Info.
+            </div>
+            <h3>Personal info</h3>
+
+            <div class="col-lg-10"><hr /></div>
+
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Your name:</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.updateName, new { htmlAttributes = new { @class = "form-control", Value = Model.updateName } })
+                    @Html.ValidationMessageFor(model => model.updateName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group"><div class="col-lg-10"><hr /></div></div>
+
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Email:</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.updateEmail, new { htmlAttributes = new { @class = "form-control", Value = Model.updateEmail } })
+                    @Html.ValidationMessageFor(model => model.updateEmail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group"><div class="col-lg-10"><hr /></div></div>
+
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Mobile:</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.updateMobile, new { htmlAttributes = new { @class = "form-control", Value = Model.updateMobile } })
+                    @Html.ValidationMessageFor(model => model.updateMobile, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group"><div class="col-lg-10"><hr /></div></div>
+
+            <div class="form-group">
+                <label class="col-lg-4 control-label">New Password:</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.updatePassword, new { htmlAttributes = new { @class = "form-control", Value = Model.Password } })
+                    @Html.ValidationMessageFor(model => model.updatePassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group"><div class="col-lg-10"><hr /></div></div>
+
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Confirm New password:</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.confirmUpdatePassword, new { htmlAttributes = new { @class = "form-control", Value = Model.Password } })
+                    @Html.ValidationMessageFor(model => model.confirmUpdatePassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group"><div class="col-lg-10"><hr /></div></div>
+
+            <div class="form-group">
+                <div class="col-lg-10">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-secondary"
+                                    onclick="location.href='@Url.Action("Index", "Home", new { Area = "Common" })';">
+                                Cancel
+                            </button>
+                        </span>
+                        @Html.EditorFor(model => model.PasswordVerfication, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Current Password..." } })
+                        <span class="input-group-btn">
+                            <button type="submit" value="Update" class="btn btn-primary">Save</button>
+                        </span>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.PasswordVerfication, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+<!-- Open Browse && Check Image File Before Submission -->>
+<script>
+    function onUAvatarClick() {
+        $("#AvatarBrowse").trigger("click");
+    }
+
+    window.URL = window.URL || window.webkitURL;
+    var elBrowse = document.getElementById("AvatarBrowse"),
+        useBlob = false && window.URL; // `true` to use Blob instead of Data-URL
+
+    function readImage(file) {
+        var reader = new FileReader();
+        reader.addEventListener("load", function () {
+            var image = new Image();
+            image.addEventListener("load", function () {
+                //trying to display the user selected image
+                $("#AvatarBox").attr("src", image.src);
+            });
+            image.src = useBlob ? window.URL.createObjectURL(file) : reader.result;
+            if (useBlob) {
+                window.URL.revokeObjectURL(file); // Free memory
+            }
+        });
+        reader.readAsDataURL(file);
+    }
+
+    elBrowse.addEventListener("change", function () {
+        var files = this.files;
+        var errors = "";
+        if (!files) {
+            errors += "File upload not supported by your browser.";
+        }
+        if (files[0]) {
+            var file = files[0];
+            if ((/\.(png|jpeg|jpg|gif)$/i).test(file.name)) {
+                readImage(file);
+            } else {
+                errors += file.name + " Unsupported Image extension\n";
+                resetBrowseVal();
+            }
+        }
+        if (errors) {
+            alert(errors);
+        }
+    });
+
+    function resetBrowseVal() {
+        $("#AvatarBrowse").val("");
+    }
+</script>

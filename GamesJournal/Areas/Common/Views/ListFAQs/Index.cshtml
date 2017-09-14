@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BOL.faq>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-responsive table-bordered table-striped table-hover">
+    <tr class="info">
+        <th>
+            @Html.ActionLink("Question", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "question", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        <th>
+            @Html.ActionLink("Answer", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "answer", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        <th>
+            @Html.ActionLink("Question Date&Time", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "Date&Time", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        <th>
+            @Html.ActionLink("Answer  Date&Time", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "Date&Time", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        <th>
+            @Html.ActionLink("Asker", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "question", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        <th>
+            @Html.ActionLink("Technical Stuff", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "answer", page = (ViewBag.Page == null ? "1" : ViewBag.Page) })
+        </th>
+        @if (User.IsInRole(BOL.userTypesEn.ChiefEditorStr) || User.IsInRole(BOL.userTypesEn.EditorStr) )
+        {
+            <th>Reply</th>
+            <th>Description</th>
+            <th>Remove</th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.answer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.q_timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.a_timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user1.name)
+            </td>
+            @if (User.IsInRole(BOL.userTypesEn.ChiefEditorStr) || User.IsInRole(BOL.userTypesEn.EditorStr))
+            {
+                <td>@Html.ActionLink("Reply", "Edit", new { id = item.id })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.id }) </td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = item.id })</td>
+            }
+        </tr>
+    }
+
+</table>

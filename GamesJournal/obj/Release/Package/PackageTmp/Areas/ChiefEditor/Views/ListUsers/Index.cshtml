@@ -1,0 +1,135 @@
+﻿@model IEnumerable<BOL.user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function ConfirmDelete() {
+        return confirm('Are you sure you want to delete?');
+    }
+</script>
+
+<h2>user</h2>
+<input placeholder=Search class=animated-search-filter>
+<p>
+    @Html.ActionLink("Create New", "CreateUser", new { Controller = "Listuser", Area = "ChiefEditor" })
+</p>
+@if (TempData["Msg"] != null)
+{ <div class="alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        @TempData["Msg"].ToString()
+    </div>
+}
+<table class="table table-responsive table-bordered table-striped table-hover">
+    <tr>
+        <th>
+                @Html.DisplayNameFor(model => model.profile_picture)
+            </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.profile_link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_type.type)
+        </th>
+        <th>Operations</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+			<td>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        @if (true)
+                        {
+                            string uAvatar = "";
+                            try
+                            {
+                                uAvatar = "data:image/bitmap;base64," + Convert.ToBase64String(item.profile_picture);
+                            }
+                            catch (Exception)
+                            {
+                                uAvatar = "http://www.clipartbest.com/cliparts/nTB/nba/nTBnbaGTA.png";
+                            }
+
+                            <img src="@uAvatar" class="uAvatar img-circle" style="width:400px !important; height:60px !important">
+
+                        }
+                    </div>
+                </div>
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.profile_link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_type.type)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@{
+    double TotalPage = @ViewBag.TotalPages;
+}
+<ul class="pagination">
+    @for (int i = 1; i <= TotalPage; i++)
+    {
+
+        if (i == ViewBag.Page)
+        {
+            <li class="active"> @Html.ActionLink(i.ToString() + " ", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder), SortBy = (ViewBag.SortBy == null ? "UserEmail" : ViewBag.SortBy), Page = i })</li>
+        }
+        else
+        {
+            <li>
+                @Html.ActionLink(i.ToString() + " ", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder), SortBy = (ViewBag.SortBy == null ? "UserEmail" : ViewBag.SortBy), Page = i })
+            </li>
+        }
+
+    }
+</ul>

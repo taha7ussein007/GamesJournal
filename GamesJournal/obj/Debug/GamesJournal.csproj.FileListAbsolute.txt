@@ -1,0 +1,322 @@
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\GamesJournal.dll.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\GamesJournal.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\GamesJournal.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Antlr3.Runtime.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\BLL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\BOL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.Core.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\EntityFramework.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\EntityFramework.SqlServer.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Newtonsoft.Json.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\PagedList.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\PagedList.Mvc.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Net.Http.Extensions.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Net.Http.Primitives.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Helpers.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Mvc.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Optimization.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Razor.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.Razor.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebActivatorEx.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebGrease.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebMatrix.Data.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebMatrix.WebData.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DAL.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Mono.Math.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\BLL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\BOL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Antlr3.Runtime.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.Core.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\EntityFramework.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\EntityFramework.SqlServer.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Newtonsoft.Json.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\PagedList.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\PagedList.Mvc.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Net.Http.Extensions.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Net.Http.Primitives.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Mvc.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Optimization.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebMatrix.Data.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\WebMatrix.WebData.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Razor.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Webpages.Razor.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\System.Web.Helpers.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\DAL.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\bin\Mono.Math.xml
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\obj\Debug\GamesJournal.csproj.App.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\obj\Debug\GamesJournal.csprojResolveAssemblyReference.cache
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\obj\Debug\GamesJournal.dll
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal\GamesJournal\obj\Debug\GamesJournal.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\GamesJournal.dll.config
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\GamesJournal.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\GamesJournal.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Antlr3.Runtime.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\BLL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\BOL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.Core.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\EntityFramework.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\EntityFramework.SqlServer.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Newtonsoft.Json.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\PagedList.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\PagedList.Mvc.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Net.Http.Extensions.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Net.Http.Primitives.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Helpers.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Mvc.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Optimization.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Razor.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.Razor.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebActivatorEx.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebGrease.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebMatrix.Data.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebMatrix.WebData.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DAL.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Mono.Math.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\BLL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\BOL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Antlr3.Runtime.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.Core.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\EntityFramework.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\EntityFramework.SqlServer.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Newtonsoft.Json.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\PagedList.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\PagedList.Mvc.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Net.Http.Extensions.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Net.Http.Primitives.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Mvc.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Optimization.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebMatrix.Data.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\WebMatrix.WebData.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Razor.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Webpages.Razor.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\System.Web.Helpers.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\DAL.pdb
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\bin\Mono.Math.xml
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\GamesJournal.csproj.App.config
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\GamesJournal.csprojResolveAssemblyReference.cache
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\RdlCompile.cache
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\RdlCompile.compiled
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\GamesJournal.dll
+C:\Users\Taha Hussein\Desktop\New folder\GamesJournal\GamesJournal\obj\Debug\GamesJournal.pdb
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csproj.App.config
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csprojResolveAssemblyReference.cache
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.cache
+C:\Users\Mahmoud Hamed\Desktop\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.compiled
+D:\GamesJournal_Final\GamesJournal\bin\GamesJournal.dll.config
+D:\GamesJournal_Final\GamesJournal\bin\GamesJournal.dll
+D:\GamesJournal_Final\GamesJournal\bin\GamesJournal.pdb
+D:\GamesJournal_Final\GamesJournal\bin\Antlr3.Runtime.dll
+D:\GamesJournal_Final\GamesJournal\bin\BLL.dll
+D:\GamesJournal_Final\GamesJournal\bin\BOL.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.AspNet.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.Core.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.dll
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\GamesJournal_Final\GamesJournal\bin\EntityFramework.dll
+D:\GamesJournal_Final\GamesJournal\bin\EntityFramework.SqlServer.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\GamesJournal_Final\GamesJournal\bin\Newtonsoft.Json.dll
+D:\GamesJournal_Final\GamesJournal\bin\PagedList.dll
+D:\GamesJournal_Final\GamesJournal\bin\PagedList.Mvc.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Extensions.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Primitives.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Helpers.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Mvc.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Optimization.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Razor.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Deployment.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.dll
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Razor.dll
+D:\GamesJournal_Final\GamesJournal\bin\WebActivatorEx.dll
+D:\GamesJournal_Final\GamesJournal\bin\WebGrease.dll
+D:\GamesJournal_Final\GamesJournal\bin\WebMatrix.Data.dll
+D:\GamesJournal_Final\GamesJournal\bin\WebMatrix.WebData.dll
+D:\GamesJournal_Final\GamesJournal\bin\DAL.dll
+D:\GamesJournal_Final\GamesJournal\bin\Org.Mentalis.Security.Cryptography.dll
+D:\GamesJournal_Final\GamesJournal\bin\Mono.Math.dll
+D:\GamesJournal_Final\GamesJournal\bin\BLL.pdb
+D:\GamesJournal_Final\GamesJournal\bin\BOL.pdb
+D:\GamesJournal_Final\GamesJournal\bin\Antlr3.Runtime.pdb
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.AspNet.xml
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.Core.xml
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.xml
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.xml
+D:\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\GamesJournal_Final\GamesJournal\bin\EntityFramework.xml
+D:\GamesJournal_Final\GamesJournal\bin\EntityFramework.SqlServer.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\GamesJournal_Final\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\GamesJournal_Final\GamesJournal\bin\Newtonsoft.Json.xml
+D:\GamesJournal_Final\GamesJournal\bin\PagedList.xml
+D:\GamesJournal_Final\GamesJournal\bin\PagedList.Mvc.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Extensions.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Primitives.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Mvc.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Optimization.xml
+D:\GamesJournal_Final\GamesJournal\bin\WebMatrix.Data.xml
+D:\GamesJournal_Final\GamesJournal\bin\WebMatrix.WebData.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Razor.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Deployment.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Razor.xml
+D:\GamesJournal_Final\GamesJournal\bin\System.Web.Helpers.xml
+D:\GamesJournal_Final\GamesJournal\bin\DAL.pdb
+D:\GamesJournal_Final\GamesJournal\bin\Org.Mentalis.Security.Cryptography.xml
+D:\GamesJournal_Final\GamesJournal\bin\Mono.Math.xml
+D:\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csproj.App.config
+D:\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csprojResolveAssemblyReference.cache
+D:\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.cache
+D:\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.compiled
+D:\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.dll
+D:\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\GamesJournal.dll.config
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\GamesJournal.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\GamesJournal.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Antlr3.Runtime.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\BLL.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\BOL.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.AspNet.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.Core.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\EntityFramework.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\EntityFramework.SqlServer.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Newtonsoft.Json.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\PagedList.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\PagedList.Mvc.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Extensions.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Primitives.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Helpers.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Mvc.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Optimization.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Razor.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Deployment.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Razor.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebActivatorEx.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebGrease.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebMatrix.Data.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebMatrix.WebData.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DAL.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Org.Mentalis.Security.Cryptography.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Mono.Math.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\BLL.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\BOL.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Antlr3.Runtime.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.AspNet.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.Core.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\EntityFramework.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\EntityFramework.SqlServer.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.Mvc.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Newtonsoft.Json.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\PagedList.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\PagedList.Mvc.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Extensions.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Net.Http.Primitives.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Mvc.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Optimization.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebMatrix.Data.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\WebMatrix.WebData.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Razor.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Deployment.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Webpages.Razor.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\System.Web.Helpers.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\DAL.pdb
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Org.Mentalis.Security.Cryptography.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\bin\Mono.Math.xml
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csproj.App.config
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.csprojResolveAssemblyReference.cache
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.cache
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\RdlCompile.compiled
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.dll
+D:\Practise projects\GamesJournal_Final\GamesJournal\obj\Debug\GamesJournal.pdb

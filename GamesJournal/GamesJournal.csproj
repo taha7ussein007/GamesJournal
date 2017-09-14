@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56AE8081-7AB3-4DEB-86C8-FC41B4D7AC27}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GamesJournal</RootNamespace>
+    <AssemblyName>GamesJournal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.3.2.3\lib\net45\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.4\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="GJSlider\data1\images\8bc2fv0jcgg.png" />
+    <Content Include="GJSlider\data1\images\eef3utkcoxy.png" />
+    <Content Include="GJSlider\data1\images\hh5hv4iic1y.png" />
+    <Content Include="GJSlider\data1\images\kiombc6e_mq.png" />
+    <Content Include="GJSlider\data1\images\td7y6iss3nk.png" />
+    <Content Include="GJSlider\data1\images\ywvpoucxac4.png" />
+    <Content Include="GJSlider\data1\tooltips\8bc2fv0jcgg.png" />
+    <Content Include="GJSlider\data1\tooltips\eef3utkcoxy.png" />
+    <Content Include="GJSlider\data1\tooltips\hh5hv4iic1y.png" />
+    <Content Include="GJSlider\data1\tooltips\kiombc6e_mq.png" />
+    <Content Include="GJSlider\data1\tooltips\td7y6iss3nk.png" />
+    <Content Include="GJSlider\data1\tooltips\ywvpoucxac4.png" />
+    <Content Include="GJSlider\engine1\arrows.png" />
+    <Content Include="GJSlider\engine1\bullet.png" />
+    <Content Include="GJSlider\engine1\jquery.js" />
+    <Content Include="GJSlider\engine1\pause.png" />
+    <Content Include="GJSlider\engine1\play.png" />
+    <Content Include="GJSlider\engine1\playvideo.png" />
+    <Content Include="GJSlider\engine1\script.js" />
+    <Content Include="GJSlider\engine1\style.css" />
+    <Content Include="GJSlider\engine1\style.mod.css" />
+    <Content Include="GJSlider\engine1\triangle.png" />
+    <Content Include="GJSlider\engine1\wowslider.js" />
+    <Content Include="GJSlider\engine1\wowslider.mod.js" />
+    <Content Include="GJSlider\GJSlider-iframe.html" />
+    <Content Include="GJSlider\GJSlider.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Common\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Common\Views\Home\Index.cshtml" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="SSSDCore\ckeditor\adapters\jquery.js" />
+    <Content Include="SSSDCore\ckeditor\build-config.js" />
+    <Content Include="SSSDCore\ckeditor\ckeditor.js" />
+    <Content Include="SSSDCore\ckeditor\config.js" />
+    <Content Include="SSSDCore\ckeditor\contents.css" />
+    <Content Include="SSSDCore\ckeditor\lang\af.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ar.js" />
+    <Content Include="SSSDCore\ckeditor\lang\bg.js" />
+    <Content Include="SSSDCore\ckeditor\lang\bn.js" />
+    <Content Include="SSSDCore\ckeditor\lang\bs.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ca.js" />
+    <Content Include="SSSDCore\ckeditor\lang\cs.js" />
+    <Content Include="SSSDCore\ckeditor\lang\cy.js" />
+    <Content Include="SSSDCore\ckeditor\lang\da.js" />
+    <Content Include="SSSDCore\ckeditor\lang\de-ch.js" />
+    <Content Include="SSSDCore\ckeditor\lang\de.js" />
+    <Content Include="SSSDCore\ckeditor\lang\el.js" />
+    <Content Include="SSSDCore\ckeditor\lang\en-au.js" />
+    <Content Include="SSSDCore\ckeditor\lang\en-ca.js" />
+    <Content Include="SSSDCore\ckeditor\lang\en-gb.js" />
+    <Content Include="SSSDCore\ckeditor\lang\en.js" />
+    <Content Include="SSSDCore\ckeditor\lang\eo.js" />
+    <Content Include="SSSDCore\ckeditor\lang\es.js" />
+    <Content Include="SSSDCore\ckeditor\lang\et.js" />
+    <Content Include="SSSDCore\ckeditor\lang\eu.js" />
+    <Content Include="SSSDCore\ckeditor\lang\fa.js" />
+    <Content Include="SSSDCore\ckeditor\lang\fi.js" />
+    <Content Include="SSSDCore\ckeditor\lang\fo.js" />
+    <Content Include="SSSDCore\ckeditor\lang\fr-ca.js" />
+    <Content Include="SSSDCore\ckeditor\lang\fr.js" />
+    <Content Include="SSSDCore\ckeditor\lang\gl.js" />
+    <Content Include="SSSDCore\ckeditor\lang\gu.js" />
+    <Content Include="SSSDCore\ckeditor\lang\he.js" />
+    <Content Include="SSSDCore\ckeditor\lang\hi.js" />
+    <Content Include="SSSDCore\ckeditor\lang\hr.js" />
+    <Content Include="SSSDCore\ckeditor\lang\hu.js" />
+    <Content Include="SSSDCore\ckeditor\lang\id.js" />
+    <Content Include="SSSDCore\ckeditor\lang\is.js" />
+    <Content Include="SSSDCore\ckeditor\lang\it.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ja.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ka.js" />
+    <Content Include="SSSDCore\ckeditor\lang\km.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ko.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ku.js" />
+    <Content Include="SSSDCore\ckeditor\lang\lt.js" />
+    <Content Include="SSSDCore\ckeditor\lang\lv.js" />
+    <Content Include="SSSDCore\ckeditor\lang\mk.js" />
+    <Content Include="SSSDCore\ckeditor\lang\mn.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ms.js" />
+    <Content Include="SSSDCore\ckeditor\lang\nb.js" />
+    <Content Include="SSSDCore\ckeditor\lang\nl.js" />
+    <Content Include="SSSDCore\ckeditor\lang\no.js" />
+    <Content Include="SSSDCore\ckeditor\lang\pl.js" />
+    <Content Include="SSSDCore\ckeditor\lang\pt-br.js" />
+    <Content Include="SSSDCore\ckeditor\lang\pt.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ro.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ru.js" />
+    <Content Include="SSSDCore\ckeditor\lang\si.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sk.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sl.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sq.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sr-latn.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sr.js" />
+    <Content Include="SSSDCore\ckeditor\lang\sv.js" />
+    <Content Include="SSSDCore\ckeditor\lang\th.js" />
+    <Content Include="SSSDCore\ckeditor\lang\tr.js" />
+    <Content Include="SSSDCore\ckeditor\lang\tt.js" />
+    <Content Include="SSSDCore\ckeditor\lang\ug.js" />
+    <Content Include="SSSDCore\ckeditor\lang\uk.js" />
+    <Content Include="SSSDCore\ckeditor\lang\vi.js" />
+    <Content Include="SSSDCore\ckeditor\lang\zh-cn.js" />
+    <Content Include="SSSDCore\ckeditor\lang\zh.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="SSSDCore\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\icons.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\preview\preview.html" />
+    <Content Include="SSSDCore\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="SSSDCore\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="SSSDCore\ckeditor\samples\css\samples.css" />
+    <Content Include="SSSDCore\ckeditor\samples\img\github-top.png" />
+    <Content Include="SSSDCore\ckeditor\samples\img\header-bg.png" />
+    <Content Include="SSSDCore\ckeditor\samples\img\header-separator.png" />
+    <Content Include="SSSDCore\ckeditor\samples\img\logo.png" />
+    <Content Include="SSSDCore\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="SSSDCore\ckeditor\samples\index.html" />
+    <Content Include="SSSDCore\ckeditor\samples\js\sample.js" />
+    <Content Include="SSSDCore\ckeditor\samples\js\sf.js" />
+    <Content Include="SSSDCore\ckeditor\samples\old\ajax.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\api.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\appendto.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="SSSDCore\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="SSSDCore\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="SSSDCore\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="SSSDCore\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="SSSDCore\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\divreplace.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="SSSDCore\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="SSSDCore\ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\index.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\inlineall.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\jquery.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\readonly.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\sample.css" />
+    <Content Include="SSSDCore\ckeditor\samples\old\sample.js" />
+    <Content Include="SSSDCore\ckeditor\samples\old\tabindex.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\uicolor.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="SSSDCore\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog_ie.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog_ie7.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog_ie8.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog_iequirks.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\dialog_opera.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor_gecko.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor_ie.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor_ie7.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor_ie8.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\.temp\css\editor_iequirks.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog_ie.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog_ie7.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog_ie8.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog_iequirks.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\dialog_opera.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor_gecko.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor_ie.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor_ie7.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor_ie8.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\editor_iequirks.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\icons.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\icons_hidpi.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\arrow.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\close.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\hidpi\close.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\hidpi\lock-open.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\hidpi\lock.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\hidpi\refresh.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\lock-open.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\lock.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\images\refresh.png" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\sample\bootstrapck-sample.html" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\sample\css\bootstrapck-sample.css" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\sample\js\analytics.js" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\sample\js\jquery-1.11.0.min.js" />
+    <Content Include="SSSDCore\ckeditor\styles.js" />
+    <Content Include="SSSDCore\Content\bootstrap-theme.css" />
+    <Content Include="SSSDCore\Content\bootstrap-theme.min.css" />
+    <Content Include="SSSDCore\Content\bootstrap.css" />
+    <Content Include="SSSDCore\Content\bootstrap.min.css" />
+    <Content Include="SSSDCore\css\custom.css" />
+    <Content Include="SSSDCore\css\reset.css" />
+    <Content Include="SSSDCore\css\style.css" />
+    <Content Include="SSSDCore\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="SSSDCore\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="SSSDCore\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="SSSDCore\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="SSSDCore\images\defaultProfilePicture.jpg" />
+    <Content Include="SSSDCore\images\UdemyLogo.png" />
+    <Content Include="SSSDCore\Scripts\bootstrap.js" />
+    <Content Include="SSSDCore\Scripts\bootstrap.min.js" />
+    <Content Include="SSSDCore\Scripts\custom.js" />
+    <Content Include="SSSDCore\Scripts\jquery-1.10.2.js" />
+    <Content Include="SSSDCore\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="SSSDCore\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="SSSDCore\Scripts\jquery.mousewheel.js" />
+    <Content Include="SSSDCore\Scripts\jquery.RotateImageMenu.js" />
+    <Content Include="SSSDCore\Scripts\jquery.transform-0.9.3.min_.js" />
+    <Content Include="SSSDCore\Scripts\jquery.validate.js" />
+    <Content Include="SSSDCore\Scripts\jquery.validate.min.js" />
+    <Content Include="SSSDCore\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="SSSDCore\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="SSSDCore\Scripts\unslider.js" />
+    <Content Include="StartPageCore\color\default.css" />
+    <Content Include="StartPageCore\css\animate.css" />
+    <Content Include="StartPageCore\css\bootstrap.css" />
+    <Content Include="StartPageCore\css\bootstrap.min.css" />
+    <Content Include="StartPageCore\css\style.css" />
+    <Content Include="StartPageCore\font-awesome\css\font-awesome.css" />
+    <Content Include="StartPageCore\font-awesome\css\font-awesome.min.css" />
+    <Content Include="StartPageCore\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="StartPageCore\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="StartPageCore\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="StartPageCore\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="StartPageCore\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="StartPageCore\font-awesome\less\bordered-pulled.less" />
+    <Content Include="StartPageCore\font-awesome\less\core.less" />
+    <Content Include="StartPageCore\font-awesome\less\fixed-width.less" />
+    <Content Include="StartPageCore\font-awesome\less\font-awesome.less" />
+    <Content Include="StartPageCore\font-awesome\less\icons.less" />
+    <Content Include="StartPageCore\font-awesome\less\larger.less" />
+    <Content Include="StartPageCore\font-awesome\less\list.less" />
+    <Content Include="StartPageCore\font-awesome\less\mixins.less" />
+    <Content Include="StartPageCore\font-awesome\less\path.less" />
+    <Content Include="StartPageCore\font-awesome\less\rotated-flipped.less" />
+    <Content Include="StartPageCore\font-awesome\less\spinning.less" />
+    <Content Include="StartPageCore\font-awesome\less\stacked.less" />
+    <Content Include="StartPageCore\font-awesome\less\variables.less" />
+    <Content Include="StartPageCore\font-awesome\scss\font-awesome.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_core.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_icons.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_larger.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_list.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_mixins.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_path.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_spinning.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_stacked.scss" />
+    <Content Include="StartPageCore\font-awesome\scss\_variables.scss" />
+    <Content Include="StartPageCore\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="StartPageCore\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="StartPageCore\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="StartPageCore\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="StartPageCore\img\bg1.jpg" />
+    <Content Include="StartPageCore\img\icons\button-icons.png" />
+    <Content Include="StartPageCore\img\icons\grid-menu-icons.png" />
+    <Content Include="StartPageCore\img\icons\menu-icons.png" />
+    <Content Include="StartPageCore\img\icons\menu-icons2.png" />
+    <Content Include="StartPageCore\img\icons\search.png" />
+    <Content Include="StartPageCore\img\icons\search2.png" />
+    <Content Include="StartPageCore\img\icons\service-icon-1.png" />
+    <Content Include="StartPageCore\img\icons\service-icon-2.png" />
+    <Content Include="StartPageCore\img\icons\service-icon-3.png" />
+    <Content Include="StartPageCore\img\icons\service-icon-4.png" />
+    <Content Include="StartPageCore\img\icons\social-icons2.png" />
+    <Content Include="StartPageCore\img\icons\weather-icons.png" />
+    <Content Include="StartPageCore\img\icons\weather-main.png" />
+    <Content Include="StartPageCore\img\loader.gif" />
+    <Content Include="StartPageCore\img\spinner.gif" />
+    <Content Include="StartPageCore\img\team\1.jpg" />
+    <Content Include="StartPageCore\img\team\2.JPG" />
+    <Content Include="StartPageCore\img\team\3.JPG" />
+    <Content Include="StartPageCore\img\team\4.JPG" />
+    <Content Include="StartPageCore\img\team\5.JPG" />
+    <Content Include="StartPageCore\img\works\1.jpg" />
+    <Content Include="StartPageCore\img\works\2.jpg" />
+    <Content Include="StartPageCore\img\works\3.jpg" />
+    <Content Include="StartPageCore\img\works\4.jpg" />
+    <Content Include="StartPageCore\img\works\5.jpg" />
+    <Content Include="StartPageCore\img\works\6.jpg" />
+    <Content Include="StartPageCore\img\works\7.jpg" />
+    <Content Include="StartPageCore\img\works\8.jpg" />
+    <Content Include="StartPageCore\js\bootstrap.js" />
+    <Content Include="StartPageCore\js\bootstrap.min.js" />
+    <Content Include="StartPageCore\js\custom.js" />
+    <Content Include="StartPageCore\js\jquery-1.10.2.js" />
+    <Content Include="StartPageCore\js\jquery.easing.min.js" />
+    <Content Include="StartPageCore\js\jquery.min.js" />
+    <Content Include="StartPageCore\js\jquery.scrollTo.js" />
+    <Content Include="StartPageCore\js\wow.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BootstrapBundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\ChiefEditor\ChiefEditorAreaRegistration.cs" />
+    <Compile Include="Areas\ChiefEditor\Controllers\ApproveArticlesController.cs" />
+    <Compile Include="Areas\ChiefEditor\Controllers\BaseChiefEditorController.cs" />
+    <Compile Include="Areas\ChiefEditor\Controllers\CreateUController.cs" />
+    <Compile Include="Areas\ChiefEditor\Controllers\ListUsersController.cs" />
+    <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
+    <Compile Include="Areas\Common\Controllers\AddArticleController.cs" />
+    <Compile Include="Areas\Common\Controllers\FAQController.cs" />
+    <Compile Include="Areas\Common\Controllers\ListFAQsController.cs" />
+    <Compile Include="Areas\Common\Controllers\ListFeedbacksController.cs" />
+    <Compile Include="Areas\Common\Controllers\MyPostsController.cs" />
+    <Compile Include="Areas\Security\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Common\Controllers\BaseCommonController.cs" />
+    <Compile Include="Areas\Common\Controllers\BrowseArticlesController.cs" />
+    <Compile Include="Areas\Common\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Security\Controllers\BaseSecurityController.cs" />
+    <Compile Include="Areas\Security\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Security\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\BaseUserController.cs" />
+    <Compile Include="Areas\User\Controllers\FeedbackController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="GamesJournalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GamesJournalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\StartPage\StartPage.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Common\Views\web.config" />
+    <Content Include="SSSDCore\Content\bootstrap-theme.css.map" />
+    <Content Include="SSSDCore\Content\bootstrap.css.map" />
+    <Content Include="Areas\Security\Views\web.config" />
+    <Content Include="Areas\Security\Views\Register\Index.cshtml" />
+    <Content Include="Areas\Security\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Security\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Security\Views\Account\Index.cshtml" />
+    <Content Include="Areas\Common\Views\AddArticle\Index.cshtml" />
+    <Content Include="SSSDCore\ckeditor\CHANGES.md" />
+    <Content Include="SSSDCore\ckeditor\LICENSE.md" />
+    <Content Include="SSSDCore\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="SSSDCore\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="SSSDCore\ckeditor\plugins\scayt\README.md" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="SSSDCore\ckeditor\plugins\wsc\README.md" />
+    <Content Include="SSSDCore\ckeditor\README.md" />
+    <Content Include="SSSDCore\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="SSSDCore\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="SSSDCore\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="SSSDCore\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\readme.md" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\gecko\editor_gecko.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie7\dialog_ie7.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie7\editor_ie7.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie8\dialog_ie8.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie8\editor_ie8.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\iequirks\dialog_iequirks.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\iequirks\editor_iequirks.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie\dialog_ie.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\ie\editor_ie.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\browser-specific\opera\dialog_opera.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\editor.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_colorpanel.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_elementspath.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_mainui.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_menu.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_panel.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_presets.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_reset.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_richcombo.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\components\_toolbar.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\config\_colors.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\config\_config.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\config\_defaults.scss" />
+    <Content Include="SSSDCore\ckeditor\skins\bootstrapck\scss\dialog\dialog.scss" />
+    <Content Include="Areas\ChiefEditor\Views\web.config" />
+    <Content Include="Areas\ChiefEditor\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\ApproveArticles\Index.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\ApproveArticles\pv_ApproveArticles.cshtml" />
+    <Content Include="Areas\Common\Views\BrowseArticles\viewArticle.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\CreateU\index.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\ListUsers\Details.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\ListUsers\Edit.cshtml" />
+    <Content Include="Areas\ChiefEditor\Views\ListUsers\Index.cshtml" />
+    <Content Include="Areas\Common\Views\BrowseArticles\Details.cshtml" />
+    <Content Include="Areas\Common\Views\BrowseArticles\Edit.cshtml" />
+    <Content Include="Areas\Common\Views\BrowseArticles\Index.cshtml" />
+    <Content Include="Areas\Common\Views\FAQ\Index.cshtml" />
+    <Content Include="Areas\Common\Views\ListFAQs\Details.cshtml" />
+    <Content Include="Areas\Common\Views\ListFAQs\Edit.cshtml" />
+    <Content Include="Areas\Common\Views\ListFAQs\Index.cshtml" />
+    <Content Include="Areas\Common\Views\ListFeedbacks\Index.cshtml" />
+    <Content Include="Areas\User\Views\Feedback\Index.cshtml" />
+    <Content Include="Areas\User\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\User\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Common\Views\MyPosts\Details.cshtml" />
+    <Content Include="Areas\Common\Views\MyPosts\Edit.cshtml" />
+    <Content Include="Areas\Common\Views\MyPosts\Index.cshtml" />
+    <Content Include="GamesJournalDataSet.xsc">
+      <DependentUpon>GamesJournalDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Areas\Common\Views\BrowseArticles\pv_comments.cshtml" />
+    <None Include="GamesJournalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GamesJournalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GamesJournalDataSet.xss">
+      <DependentUpon>GamesJournalDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\GamesJournal.pubxml" />
+    <None Include="SSSDCore\Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="SSSDCore\Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\ChiefEditor\Models\" />
+    <Folder Include="Areas\ChiefEditor\Views\BaseChiefEditor\" />
+    <Folder Include="Areas\Common\Models\" />
+    <Folder Include="Areas\Common\Views\BaseCommon\" />
+    <Folder Include="Areas\Common\Views\Shared\" />
+    <Folder Include="Areas\Security\Models\" />
+    <Folder Include="Areas\Security\Views\BaseSecurity\" />
+    <Folder Include="Areas\Security\Views\Shared\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\BaseUser\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{47c6a331-084f-400b-ba02-11cc991fcda3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BOL\BOL.csproj">
+      <Project>{439670af-baa9-4c64-b1e0-192758e97eb7}</Project>
+      <Name>BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\GmsJournReport.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9831</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5544/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:5555/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

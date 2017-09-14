@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GamesJournalModelStoreContainer" CdmEntityContainer="GamesJournalEntities">
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="GamesJournalModel.article">
+        <MappingFragment StoreEntitySet="article">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="rate_count" ColumnName="rate_count" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_state">
+      <EntityTypeMapping TypeName="GamesJournalModel.article_state">
+        <MappingFragment StoreEntitySet="article_state">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="article_type">
+      <EntityTypeMapping TypeName="GamesJournalModel.article_type">
+        <MappingFragment StoreEntitySet="article_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comments">
+      <EntityTypeMapping TypeName="GamesJournalModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compatible_game">
+      <EntityTypeMapping TypeName="GamesJournalModel.compatible_game">
+        <MappingFragment StoreEntitySet="compatible_game">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="complaints">
+      <EntityTypeMapping TypeName="GamesJournalModel.complaint">
+        <MappingFragment StoreEntitySet="complaint">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="responder_id" ColumnName="responder_id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="response" ColumnName="response" />
+          <ScalarProperty Name="comp_timestamp" ColumnName="comp_timestamp" />
+          <ScalarProperty Name="resp_timestamp" ColumnName="resp_timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faqs">
+      <EntityTypeMapping TypeName="GamesJournalModel.faq">
+        <MappingFragment StoreEntitySet="faq">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="asker_id" ColumnName="asker_id" />
+          <ScalarProperty Name="respondent_id" ColumnName="respondent_id" />
+          <ScalarProperty Name="q_timestamp" ColumnName="q_timestamp" />
+          <ScalarProperty Name="a_timestamp" ColumnName="a_timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="GamesJournalModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="games">
+      <EntityTypeMapping TypeName="GamesJournalModel.game">
+        <MappingFragment StoreEntitySet="game">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="release_date" ColumnName="release_date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="links" ColumnName="links" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_type">
+      <EntityTypeMapping TypeName="GamesJournalModel.game_type">
+        <MappingFragment StoreEntitySet="game_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="latest_news">
+      <EntityTypeMapping TypeName="GamesJournalModel.latest_news">
+        <MappingFragment StoreEntitySet="latest_news">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="brief" ColumnName="brief" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pc_specs">
+      <EntityTypeMapping TypeName="GamesJournalModel.pc_specs">
+        <MappingFragment StoreEntitySet="pc_specs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="pc_no" ColumnName="pc_no" />
+          <ScalarProperty Name="cpu_model" ColumnName="cpu_model" />
+          <ScalarProperty Name="memory_size" ColumnName="memory_size" />
+          <ScalarProperty Name="gpu_model" ColumnName="gpu_model" />
+          <ScalarProperty Name="resolution" ColumnName="resolution" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="GamesJournalModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="profile_picture" ColumnName="profile_picture" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="profile_link" ColumnName="profile_link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_fav">
+      <EntityTypeMapping TypeName="GamesJournalModel.user_fav">
+        <MappingFragment StoreEntitySet="user_fav">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="art_id" ColumnName="art_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_type">
+      <EntityTypeMapping TypeName="GamesJournalModel.user_type">
+        <MappingFragment StoreEntitySet="user_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

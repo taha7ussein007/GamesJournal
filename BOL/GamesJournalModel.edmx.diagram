@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a5cbfabff5d4e0ba828ffcfcb729858" Name="Diagram1">
+        <EntityTypeShape EntityType="GamesJournalModel.article" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.article_state" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.article_type" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.comment" Width="1.5" PointX="10.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.compatible_game" Width="1.5" PointX="8.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.complaint" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.faq" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.feedback" Width="1.5" PointX="5.25" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.game" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.game_type" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.latest_news" Width="1.5" PointX="5.25" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.pc_specs" Width="1.5" PointX="5.25" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.user" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.user_fav" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesJournalModel.user_type" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="GamesJournalModel.article_article_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.article_article_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.article_article_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.comment_comment_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.user_fav_user_fav_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.comment_comment_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.compatible_game_compatible_game_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.compatible_game_compatible_game_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.complaint_complaint_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.complaint_complaint_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.faq_faq_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.faq_faq_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.feedback_feedback_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.game_game_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.game_game_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.latest_news_latest_news_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.pc_specs_pc_specs_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.user_fav_user_fav_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesJournalModel.user_user_ibfk_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
