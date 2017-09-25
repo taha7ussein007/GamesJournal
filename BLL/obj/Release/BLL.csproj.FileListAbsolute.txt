@@ -10,3 +10,16 @@ D:\GamesJournal_Final\BLL\bin\Release\EntityFramework.xml
 D:\GamesJournal_Final\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 D:\GamesJournal_Final\BLL\obj\Release\BLL.dll
 D:\GamesJournal_Final\BLL\obj\Release\BLL.pdb
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\BLL.dll.config
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\BLL.dll
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\BLL.pdb
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\BOL.dll
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\DAL.dll
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\EntityFramework.dll
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\System.Web.Helpers.dll
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\BOL.pdb
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\DAL.pdb
+D:\GitHubGeneral\GamesJournal\BLL\bin\Release\EntityFramework.xml
+D:\GitHubGeneral\GamesJournal\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\GitHubGeneral\GamesJournal\BLL\obj\Release\BLL.dll
+D:\GitHubGeneral\GamesJournal\BLL\obj\Release\BLL.pdb

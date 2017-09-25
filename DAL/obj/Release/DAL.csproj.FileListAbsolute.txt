@@ -10,3 +10,16 @@ D:\GamesJournal_Final\DAL\bin\Release\EntityFramework.SqlServer.xml
 D:\GamesJournal_Final\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\GamesJournal_Final\DAL\obj\Release\DAL.dll
 D:\GamesJournal_Final\DAL\obj\Release\DAL.pdb
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\DAL.dll.config
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\DAL.dll
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\DAL.pdb
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\BOL.dll
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\EntityFramework.dll
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\System.Web.Helpers.dll
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\BOL.pdb
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\EntityFramework.xml
+D:\GitHubGeneral\GamesJournal\DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\GitHubGeneral\GamesJournal\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\GitHubGeneral\GamesJournal\DAL\obj\Release\DAL.dll
+D:\GitHubGeneral\GamesJournal\DAL\obj\Release\DAL.pdb

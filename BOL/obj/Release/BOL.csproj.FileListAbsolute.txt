@@ -8,3 +8,14 @@ D:\GamesJournal_Final\BOL\bin\Release\EntityFramework.SqlServer.xml
 D:\GamesJournal_Final\BOL\obj\Release\BOL.csprojResolveAssemblyReference.cache
 D:\GamesJournal_Final\BOL\obj\Release\BOL.dll
 D:\GamesJournal_Final\BOL\obj\Release\BOL.pdb
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\BOL.dll.config
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\BOL.dll
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\BOL.pdb
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\EntityFramework.dll
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\EntityFramework.SqlServer.dll
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\System.Web.Helpers.dll
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\EntityFramework.xml
+D:\GitHubGeneral\GamesJournal\BOL\bin\Release\EntityFramework.SqlServer.xml
+D:\GitHubGeneral\GamesJournal\BOL\obj\Release\BOL.csprojResolveAssemblyReference.cache
+D:\GitHubGeneral\GamesJournal\BOL\obj\Release\BOL.dll
+D:\GitHubGeneral\GamesJournal\BOL\obj\Release\BOL.pdb
