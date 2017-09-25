@@ -14,3 +14,31 @@ User Requirements :
 11-	Bootstrap is required (Grid System)
 12-     Implementation Must Meet your SRS-SDD. 
 
+#Screen Shots
+
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/1.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/2.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/3.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/4.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/5.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/6.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/7.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/8.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/9.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/10.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/11.PNG)
+![alt text](https://github.com/taha7ussein007/GamesJournal/blob/master/scrShots/12.PNG)
+
+#How To Use:
+
+- Put Database in your sql server.
+- Configure your connectionStrings in BOL/App.Config 
+<connectionStrings>
+<add name="GamesJournalEntities" connectionString="metadata=res://*/GamesJournalModel.csdl|res://*/GamesJournalModel.ssdl|res://*/GamesJournalModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=^^^^^your server name here^^^^^^^;initial catalog=GamesJournal;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+</connectionStrings>
+
+- Do the same thing again Configure your connectionStrings in GameJournal/Web.config
+
+- #Engoy
+
+
