@@ -34,7 +34,7 @@ User Requirements :
 - Put Database in your sql server.
 - Configure your connectionStrings in BOL/App.Config 
 
-<add name="GamesJournalEntities" connectionString="metadata=res://*/GamesJournalModel.csdl|res://*/GamesJournalModel.ssdl|res://*/GamesJournalModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=^^^^^your server name here^^^^^^^;initial catalog=GamesJournal;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+[<add name="GamesJournalEntities" connectionString="metadata=res://*/GamesJournalModel.csdl|res://*/GamesJournalModel.ssdl|res://*/GamesJournalModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=^^^^^your server name here^^^^^^^;initial catalog=GamesJournal;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />]
 
 - Do the same thing again Configure your connectionStrings in GameJournal/Web.config
 
