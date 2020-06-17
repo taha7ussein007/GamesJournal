@@ -39,6 +39,6 @@ User Requirements :
 
 - Do the same thing again Configure your connectionStrings in GameJournal/Web.config
 
-- #Engoy
+- #Enjoy
 
 
